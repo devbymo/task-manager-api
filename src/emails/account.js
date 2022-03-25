@@ -12,7 +12,7 @@ const sendWelcomeEmail = async (email, name) => {
       text: `Welcome to our web-app ${name}`,
     });
 
-    console.log(result);
+    // console.log(result);
     console.log('Sign-up email sent successfully.');
   } catch (err) {
     console.log(err.message);
@@ -28,7 +28,7 @@ const sendCancelationEmail = async (email, name) => {
       text: `Goodbye, ${name}. I hope to see you back sometime soon.`,
     });
 
-    console.log(result);
+    // console.log(result);
     console.log('Delete email sent successfully.');
   } catch (err) {
     console.log(err.message);
