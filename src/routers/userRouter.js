@@ -37,13 +37,14 @@ const multer = require('multer');
 const User = require('../models/User');
 const upload = multer({
   limits: {
-    fileSize: 1000000, // 1MB
+    fileSize: +process.env.USER_AVATAR_MAX_SIZE, // 1MB
   },
   fileFilter(req, file, cb) {
     if (!file.originalname.match(/\.(jpg|png|jpeg)$/)) {
       return cb(new Error('Please upload an image!'));
     }
 
+    req.file = file;
     cb(undefined, true);
   },
 });
