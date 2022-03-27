@@ -57,7 +57,7 @@ userRounter.post(
       // Re-formatting the image using sharp.
       const Buffer = await sharp(req.file.buffer)
         .png()
-        .resize({ width: 250, height: 250 })
+        .resize({ width: 500, height: 500 })
         .toBuffer();
 
       // Save the image.
